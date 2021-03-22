@@ -7,7 +7,7 @@ const playlistInput = new PlaylistInput(CONSTS.IDS.TOPIC_NAME_INPUT);
 const searchBtn = new SearchButton(CONSTS.IDS.SEARCH_BTN);
 const loader = new Loader(CONSTS.IDS.LOADER);
 
-const userHandlerIndex = userSelect.documentIsReadyEvent.subscribe((sender, args) => {
+const userHandlerIndex = userSelect.documentIsReadyEvent.subscribe((sender) => {
     sender.documentIsReadyEvent.unsubscribe(userHandlerIndex);
     sender.init();
 
@@ -24,18 +24,18 @@ const userHandlerIndex = userSelect.documentIsReadyEvent.subscribe((sender, args
         })
 });
 
-const playlistHandlerIndex = playlistInput.documentIsReadyEvent.subscribe((sender, args) => {
+const playlistHandlerIndex = playlistInput.documentIsReadyEvent.subscribe((sender) => {
     sender.documentIsReadyEvent.unsubscribe(playlistHandlerIndex);
     sender.init();
     sender.updateSelectedValueFromExistsStorage();
 });
 
-const searchHandlerIndex = searchBtn.documentIsReadyEvent.subscribe((sender, args) => {
+const searchHandlerIndex = searchBtn.documentIsReadyEvent.subscribe((sender) => {
     sender.documentIsReadyEvent.unsubscribe(searchHandlerIndex);
     sender.init();
 });
 
-const loaderHandlerIndex = loader.documentIsReadyEvent.subscribe((sender, args) => {
+const loaderHandlerIndex = loader.documentIsReadyEvent.subscribe((sender) => {
     sender.documentIsReadyEvent.unsubscribe(loaderHandlerIndex);
     sender.init();
 });
@@ -43,8 +43,6 @@ const loaderHandlerIndex = loader.documentIsReadyEvent.subscribe((sender, args) 
 loader.requestToServerEvent.subscribe((sender, args) => {
     sender.updateDisplayStyle(args);
 });
-
-
 
 const readyStateCheckInterval = setInterval(function() {
     if (document.readyState === CONSTS.DOCUMENT_STATUS.READY) {
