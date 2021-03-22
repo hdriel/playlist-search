@@ -1,0 +1,65 @@
+:root {
+    --primary: #2f3b52;
+    --accent: #1f8efa;
+    --background: #141d2f;
+    --item-background: #293449;
+    --graph-highlight: #3e4e6c;
+}
+
+.search-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 2px;
+    margin: 20px 0;
+    background: var(--primary);
+}
+
+.search-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px 0 5px;
+}
+
+.search-input input:focus{
+    outline: var(--accent);
+}
+
+.search-input input, .search-input select {
+    background: transparent;
+    border: 2px solid var(--accent);
+    border-radius: 8px;
+    height: 30px;
+    width: 200px;
+    color: #eeeeee;
+    padding: 2px 5px;
+    font-size: 16px;
+    margin: 0 30px 0 15px;
+}
+
+.search-input select {
+    height: 40px;
+}
+
+#button{
+    padding: 10px 5px;
+    background: var(--accent);;
+    color: #FFF;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    width: 120px;
+    font-size: 16px;
+    margin-left: 25px;
+}
+
+#button:disabled{
+    background: #6e8af0;
+    cursor: not-allowed;
+}
+
+#usersSelect option {
+    color: var(--background);
+}

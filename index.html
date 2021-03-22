@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Playlist Search</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" />
+    <style type="text/css">
+      :root {
+        --primary: #2f3b52;
+        --accent: #1f8efa;
+        --background: #141d2f;
+        --item-background: #293449;
+        --graph-highlight: #3e4e6c;
+      }
+
+      body {
+        background-color: var(--background);
+        font-family: "Roboto", sans-serif;
+        color: #ffffff;
+      }
+    </style>
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/content.css" />
+    <link rel="stylesheet" href="./styles/playlist-items.css" />
+    <link rel="stylesheet" href="./styles/top-items.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+    <script type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div class="wrapper-content">
+        <div class="search-section">
+
+          <div class="search-input topic-name">
+            <label>Topic Name</label>
+            <input id="topicNameInput" type="text" />
+          </div>
+
+          <div class="search-input topic-name">
+            <label>Select User</label>
+            <select id="usersSelect">
+              <option>Select User</option>
+            </select>
+          </div>
+
+          <button id="button" disabled>Search</button>
+      </div>
+
+      <div class="search-results">
+        <div id="loader">
+          <i class="fa fa-refresh rotating" aria-hidden="true"></i>
+        </div>
+
+        <div class="left-section">
+          <label class="title-summary">
+            Hours I spent watching <span id="search-result-title"></span> <span id="search-result-time"></span>
+          </label>
+          <div id="playlist-items" class="items">
+
+            <div class="item" style="display: none">
+              <div class="left-part">
+                <i class="fa fa-info-circle info-icon"></i>
+                <span class="title">Angular</span>
+              </div>
+              <div class="right-part">
+                <span class="time">12:04</span>
+                <i class="fa fa-ellipsis-v options-icon"></i>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="right-section">
+          <label class="title-summary">
+            Top <span id="top-topic-num"></span>
+          </label>
+
+          <div id="top-items">
+
+            <div class="top-item" style="display: none">
+              <div class="bar-item"></div>
+              <div class="bar-item-cover"></div>
+              <span class="bar-title">Angular</span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <script type="text/javascript" src="scripts/consts.js"></script>
+    <script type="text/javascript" src="scripts/utils.js"></script>
+    <script type="text/javascript" src="scripts/elements.js"></script>
+    <script type="text/javascript" src="scripts/service.js"></script>
+    <script type="text/javascript" src="scripts/storage.js"></script>
+    <script type="text/javascript" src="scripts/event.js"></script>
+    <script type="text/javascript" src="data/users.js"></script>
+    <script type="text/javascript" src="data/playlists.js"></script>
+    <script type="text/javascript" src="scripts/server.js"></script>
+    <script type="text/javascript" src="scripts/delayWrapper.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
+</html>
