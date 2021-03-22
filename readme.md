@@ -25,3 +25,7 @@ b. RIGHT SECTION: (Graph Top 6 results)
 3. Use SCC FlexBox / Grid Layout.
 
 4. Write clean & readable code.
+
+<hr>
+
+![image](./playlist-search.png)
